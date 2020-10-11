@@ -1,7 +1,7 @@
 #home {
     margin: 0 auto;
-    width: 80%;/*Ô­Ê¼65*/
-    min-width: 980px;/*Ò³Ãæ¶¥²¿µÄ¿í¶È*/
+    width: 80%;/*åŸå§‹65*/
+    min-width: 980px;/*é¡µé¢é¡¶éƒ¨çš„å®½åº¦*/
     background-color: rgba(245, 245, 245, 0.2);
     padding: 30px;
     margin-top: 50px;
@@ -9,26 +9,26 @@
     box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 }
 body {
-    background: rgba(12, 100, 129, 1) url('https://images.cnblogs.com/cnblogs_com/xiaoluohao/1167182/o_love@1x.jpg') fixed no-repeat;
+    background: rgba(12, 100, 129, 1) url('https://i.loli.net/2020/10/11/VwJsj1WSxCPcihQ.jpg') fixed no-repeat;
     background-position: 50% 5%; 
     background-size: cover;
 }
 #blogTitle {
-    height: 100px;  /*¸ß¶È*/
+    height: 100px;  /*é«˜åº¦*/
     clear: both;
     background-color: rgba(245, 245, 245, 0);
 }
 #blogTitle h1 {
     font-size: 36px;
     font-weight: bold;
-    line-height: 1.8em;/*Ô­Ê¼ 1.6em*/
-    margin-top: 10px;/*Ô­Ê¼ 15px */
+    line-height: 1.8em;/*åŸå§‹ 1.6em*/
+    margin-top: 10px;/*åŸå§‹ 15px */
     background-color: rgba(255, 255, 255, 0);
 }
 #blogTitle h2 {
     font-weight: normal;
-    font-family: "»ªÎÄ¿¬Ìå";
-    font-size: 18px;/*Ô­Ê¼ 16px £»font-size: 1.0rem;*/      
+    font-family: "åæ–‡æ¥·ä½“";
+    font-size: 18px;/*åŸå§‹ 16px ï¼›font-size: 1.0rem;*/      
     line-height: 1.8;
     color: #ccc;
     font-weight: bold;
@@ -83,7 +83,7 @@ body {
 .day {
     background: rgba(255, 255, 255, 0.4);
 }
-/*ÎÄÕÂ¸½¼ÓĞÅÏ¢*/
+/*æ–‡ç« é™„åŠ ä¿¡æ¯*/
 .postDesc {   
     
     color: #757575;
@@ -91,9 +91,9 @@ body {
     width: 100%;
     clear: both;
     text-align: left;     
-    font-family: "»ªÎÄĞĞ¿¬" , "»ªÎÄĞĞ¿¬" , "»ªÎÄĞĞ¿¬" ,"»ªÎÄĞĞ¿¬";
+    font-family: "åæ–‡è¡Œæ¥·" , "åæ–‡è¡Œæ¥·" , "åæ–‡è¡Œæ¥·" ,"åæ–‡è¡Œæ¥·";
     font-size: 13px;
-    padding-right: 20px;/*5px  padding-left: 90px;posted ·¢±íÊ±¼ä×ó±ß¾àÀë*/
+    padding-right: 20px;/*5px  padding-left: 90px;posted å‘è¡¨æ—¶é—´å·¦è¾¹è·ç¦»*/
     margin-top: 20px;
     line-height: 1.8;
     padding-bottom: 35px;
@@ -148,7 +148,7 @@ body {
 }
 
 #blogTitle h1{
-     font-family: "»ªÎÄĞĞ¿¬";
+     font-family: "åæ–‡è¡Œæ¥·";
      font-size:50px;
      
 }
@@ -193,7 +193,7 @@ background: rgba(255, 255, 255, 0);
 
 
 
-/* Ñ© */
+/* é›ª */
 #Snow{
 position: fixed;
  left: 0px; 
@@ -201,7 +201,7 @@ top: 0px;
 z-index: 4192575111111;
  pointer-events: none;
 }
-/* ¿´°åÄï */
+/* çœ‹æ¿å¨˜ */
 .waifu-tips {
     opacity: 0;
     width: 250px;
@@ -222,7 +222,7 @@ z-index: 4192575111111;
     animation-name: shake;
     animation-timing-function: ease-in-out;
 }
-/* css88 0.1´úÂë*/
+/* css88 0.1ä»£ç */
 .prettyprint,pre.prettyprint {
     background-color: #444444;
     /*border: 1px solid #272822;*/
