@@ -9,7 +9,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('welcome|come|here|to start|#circle|#countdown 3|李壮壮');
+      S.UI.simulate('welcome|come|here|to start|#circle|#countdown 3|enjoy yourself！');
     }
 
     S.Drawing.loop(function () {
