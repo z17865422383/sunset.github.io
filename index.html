@@ -164,7 +164,7 @@
 var a_idx = 0;
 jQuery(document).ready(function($) {
     $("body").click(function(e) {
-        var a = new Array("❤","🍊","❤","🍊","🍊","❤","🍊","❤");
+        var a = new Array("你好吗","别玩了","歇一会","到此为止吧","你好吗","别玩了","歇一会","到此为止吧");
         //-------------------1-2-3-4-5 -1-2 - 1  My Love! 
         var $i = $("<span></span>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
@@ -192,7 +192,7 @@ jQuery(document).ready(function($) {
 </script>
 	
 	<!-- 音乐 -->
-	<audio loop src="/music1.mp3" id="audio" autoplay playload="auto"></audio>
+	<audio loop src="/music2[1].mp3" id="audio" autoplay playload="auto"></audio>
 	<script type="text/javascript">;//--创建页面监听，等待微信端页面加载完毕 触发音频播放
 		document.addEventListener('DOMContentLoaded', function () 
 		{
