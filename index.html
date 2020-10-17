@@ -1,42 +1,223 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8">
+		<title>Picture show</title>
+		<style>
+			*{
+			    padding:0;
+			    margin:0;
+			}
+			body{
+			    width:100%;
+			    height:100%;
+			}
+			#react{
+			    width: 200px;
+			    height:200px;
+			    margin: 200px auto;
+			    transform-style:preserve-3d;
+			    animation:rotate 20s infinite;
+			    animation-timing-function: linear;
+			}
+			#react div{
+			    position:absolute;
+			    transition: all .4s;
+			}
+			div .out_pic{
+			    width:200px;
+			    height:200px;
+			    opacity:0.9;
+			}
+			div .in_pic{
+			    width:100px;
+			    height:100px;
+			}
+			#react span{
+			    display:block;
+			    position:absolute;
+			    width:100px;
+			    height:100px;
+			    top:50px;
+			    left:50px;
+			}
+			@keyframes rotate{
+			    from{transform: rotateX(0deg) rotateY(0deg);}
+			    to{transform: rotateX(360deg) rotateY(360deg);}
+			}
+			.out_frount{
+			    transform:translateZ(100px);
+			}
+			.out_back{
+			    transform:translateZ(-100px);
+			}
+			.out_left{
+			    transform:rotateY(90deg) translateZ(100px);
+			}
+			.out_right{
+			    transform: rotateY(-90deg) translateZ(100px);
+			}
+			.out_top{
+			    transform:rotateX(90deg) translateZ(100px);
+			}
+			.out_bottom{
+			    transform: rotateX(-90deg) translateZ(100px);
+			}
+			.in_frount{
+			    transform:translateZ(50px);
+			}
+			.in_back{
+			    transform:translateZ(-50px);
+			}
+			.in_left{
+			    transform:rotateY(90deg) translateZ(50px);
+			}
+			.in_right{
+			    transform: rotateY(-90deg) translateZ(50px);
+			}
+			.in_top{
+			    transform:rotateX(90deg) translateZ(50px);
+			}
+			.in_bottom{
+			    transform: rotateX(-90deg) translateZ(50px);
+			}
+			#react:hover .out_frount{
+			    transform:translateZ(200px);
+			}
+			#react:hover .out_back{
+			    transform:translateZ(-200px);
+			}
+			#react:hover .out_left{
+			    transform:rotateY(90deg) translateZ(200px);
+			}
+			#react:hover .out_right{
+			    transform: rotateY(-90deg) translateZ(200px);
+			}
+			#react:hover .out_top{
+			    transform:rotateX(90deg) translateZ(200px);
+			}
+			#react:hover .out_bottom{
+			    transform: rotateX(-90deg) translateZ(200px);
+			}
+			@charset "utf-8";
+			/* CSS Document */
+		</style>
+	</head>
 
-<head>
-
-  <meta charset="UTF-8">
-
-  <title>粒子效果</title>
-
-  <link rel="stylesheet" href="/css/normalize.css">
-
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" />
-
-</head>
-
-<body>
-
-<canvas class="canvas"></canvas>
-
-<div class="help"></div> 
-
-<div class="ui">
-  <input class="ui-input" type="hidden" />
-</div>
-
-<div class="overlay">
-  <div class="tabs">
-    <div class="tabs-labels"><span class="tabs-label"></span><span class="tabs-label"></span><span class="tabs-label"></span></div>
-
-    <div class="tabs-panels">
-      <ul class="tabs-panel commands">
-        
+	<body>
+		<div id="react">
+			<div class="out_frount">
+				<img src="01.png" class="out_pic"> 
+			</div>
+			<div class="out_back">
+				<img src="02.png" class="out_pic">
+			</div>
+			<div class="out_left">
+				<img src="03.png" class="out_pic">
+			</div>
+			<div class="out_right">
+				<img src="04.png" class="out_pic">
+			</div>
+			<div class="out_top">
+				<img src="05.png" class="out_pic">
+			</div>
+			<div class="out_bottom">
+				<img src="06.png" class="out_pic">
+			</div>
+			<span class="in_frount">
+				<img src="01.png" class="in_pic">
+			</span>
+			<span class="in_back">
+				<img src="02.png" class="in_pic">
+			</span>
+			<span class="in_left">
+				<img src="03.png" class="in_pic">
+			</span>
+			<span class="in_right">
+				<img src="04.png" class="in_pic">
+			</span>
+			<span class="in_top">
+				<img src="05.png" class="in_pic">
+			</span>
+			<span class="in_bottom">
+				<img src="06.png" class="in_pic">
+			</span>
 		</div>
-    </div>
-  </div>
-</div>
-
-  <script src="/js/index.js"></script>
-
-</body>
-
+		</div>
+	
+	<!--背景 -->
+<link rel="stylesheet" href="/stylesheet.css" />
+<link id="MainCss" rel="stylesheet" href="/MainCss.css" />
+<link type="text/css" rel="stylesheet" href="/text.css" />
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/mobile-style.css" />
+   
+    
+	<!--鼠标点击事件 -->
+<script src="/mouse-click.js" defer></script>
+<canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+	<!-- 背景动画 -->
+<canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+<script src="/canvas-nest.min.js" defer></script>	
+	<!-- 鼠标爱心 -->
+<script src="/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("❤","🍊","❤","🍊","🍊","❤","🍊","❤");
+        //-------------------1-2-3-4-5 -1-2 - 1  My Love! 
+        var $i = $("<span></span>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+	
+	<!-- 音乐 -->
+	<audio loop src="/music1.mp3" id="audio" autoplay playload="auto"></audio>
+	<script type="text/javascript">;//--创建页面监听，等待微信端页面加载完毕 触发音频播放
+		document.addEventListener('DOMContentLoaded', function () 
+		{
+    			function audioAutoPlay() 
+				{
+        				var audio = document.getElementById('audio');
+            				audio.play();
+        				document.addEventListener("WeixinJSBridgeReady", function () 
+						{
+            						audio.play();
+        					}, false);
+    				}
+    			audioAutoPlay();
+		});
+	
+		//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+		document.addEventListener('touchstart', function () 
+			{
+    				function audioAutoPlay() 
+					{
+        					var audio = document.getElementById('audio');
+            					audio.play();
+    					}
+    				audioAutoPlay();
+			});
+	</script>
+	</body>
 </html>
