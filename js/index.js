@@ -705,3 +705,7 @@ S.Shape = (function () {
 
 
 S.init();
+
+
+var str="张洪强设计，如有侵权请联系我，QQ：2243652046";
+console.log(str);
